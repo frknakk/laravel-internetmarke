@@ -1,0 +1,33 @@
+{
+    "name": "frknakk/laravel-internetmarke",
+    "description": "A Internetmarke and ProdWS Wrapper for Laravel",
+    "type": "project",
+    "license": "MIT",
+    "keywords": ["laravel", "internetmarke", "prodws"],
+    "authors": [
+        {
+            "name": "Furkan Akkoc",
+            "email": "furkan.akkoc@fatech.dev"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Frknakk\\Internetmarke\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Frknakk\\Internetmarke\\ServiceProvider"
+            ],
+            "aliases": {
+                "ProdWS": "Frknakk\\Internetmarke\\ProdWS\\Facade"
+            }
+        }
+    },
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "illuminate/support": "^6|^7|^8"
+    }
+}
