@@ -23,7 +23,7 @@
             ],
             "aliases": {
                 "ProdWS": "Frknakk\\Internetmarke\\ProdWS\\Facade",
-                "Internetmarke": "Frknakk\\Internetmarke\\Internetmarke\\Facade"
+                "Internetmarke": "Frknakk\\Internetmarke\\Facade"
             }
         }
     },
