@@ -3,7 +3,7 @@
     "description": "A Internetmarke and ProdWS Wrapper for Laravel",
     "type": "project",
     "license": "MIT",
-    "keywords": ["laravel", "internetmarke", "prodws"],
+    "keywords": ["laravel", "internetmarke", "prodws", "eporto", "portokasse"],
     "authors": [
         {
             "name": "Furkan Akkoc",
@@ -22,7 +22,8 @@
                 "Frknakk\\Internetmarke\\ServiceProvider"
             ],
             "aliases": {
-                "ProdWS": "Frknakk\\Internetmarke\\ProdWS\\Facade"
+                "ProdWS": "Frknakk\\Internetmarke\\ProdWS\\Facade",
+                "Internetmarke": "Frknakk\\Internetmarke\\Internetmarke\\Facade"
             }
         }
     },

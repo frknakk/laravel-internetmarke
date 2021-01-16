@@ -20,6 +20,10 @@ class ServiceProvider extends IlluminateServiceProvider
         $this->app->bind('prodws', function ($app) {
             return new ProdWS\ProdWS($app['config']);
         });
+
+        $this->app->bind('internetmarke', function ($app) {
+            return new Internetmarke($app['config']);
+        });
     }
 
     /**
@@ -41,7 +45,7 @@ class ServiceProvider extends IlluminateServiceProvider
      */
     public function provides()
     {
-        return ['prodws'];
+        return ['prodws', 'internetmarke'];
     }
 
 }
