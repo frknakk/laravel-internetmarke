@@ -1,4 +1,11 @@
 ## Laravel Wrapper for [Internetmarke and ProdWS](https://www.deutschepost.de/de/i/internetmarke-porto-drucken/downloads.html)
+![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/frknakk/laravel-internetmarke)
+![Packagist Version](https://img.shields.io/packagist/v/frknakk/laravel-internetmarke)
+![GitHub](https://img.shields.io/github/license/frknakk/laravel-internetmarke)
+
+Require this package in the `composer.json` of your Laravel project.
+
+    composer require frknakk/laravel-internetmarke
 
 ### Basic Usage
 
