@@ -44,13 +44,28 @@ class ProdWS extends \SoapClient
         return parent::__doRequest($request, $location, $action, $version);
     }
 
-    public function getProducts($only_sales_products = false)
+    /**
+     * Fetch available products
+     *
+     * @param  only_sales_products Fetch only sales products?
+     * @param  validity_start Start date (fetch future changes)
+     * @return array
+     */
+    public function getProducts($only_sales_products = false, $validity_start = null)
     {
-        $resp = $this->getProductList([
+        $params = [
             'mandantID' => $this->config->get('internetmarke.prodws.mandant_id'),
             'dedicatedProducts' => !$only_sales_products,
             'responseMode' => 0,
-        ]);
+        ];
+        if ($validity_start instanceof \DateTime || $validity_start instanceof \Carbon\Carbon)
+        {
+            $params['timestamp'] = [
+                'date' => $validity_start->format('Y-m-d'),
+                'time' => $validity_start->format('H:i:s')
+            ];
+        }
+        $resp = $this->getProductList($params);
         if (!isset($resp->success) || !isset($resp->Response) || !$resp->success) return false;
 
         $resp_arr = [
@@ -78,13 +93,20 @@ class ProdWS extends \SoapClient
     }
 
     /**
-     * Useless?
-     * Always returns no changes available, even for 2000-01-01 last query date
+     * Determine if product changes are available for the provided date.
      *
-     * Same problem for "onlyChanges" and "referenceDate" attributes on $this->getProductList
+     * @param  dt start date
+     * @return bool
      */
     public function productChangesAvailable($dt)
     {
+        /**
+         * Useless?
+         * Always returns no changes available, even for 2000-01-01 last query date
+         *
+         * Same problem for "onlyChanges" and "referenceDate" attributes on $this->getProductList
+         */
+
         $resp = $this->getProductChangeInformation([
             'mandantID' => $this->config->get('internetmarke.prodws.mandant_id'),
             'lastQueryDate' => [
