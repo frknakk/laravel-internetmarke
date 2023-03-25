@@ -1,7 +1,7 @@
-## Laravel Wrapper for [Internetmarke and ProdWS](https://www.deutschepost.de/de/i/internetmarke-porto-drucken/downloads.html)
-![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/frknakk/laravel-internetmarke)
-![Packagist Version](https://img.shields.io/packagist/v/frknakk/laravel-internetmarke)
-![GitHub](https://img.shields.io/github/license/frknakk/laravel-internetmarke)
+## Laravel Wrapper for [Internetmarke and ProdWS](https://entwickler.dhl.de/)
+[![Packagist PHP Version Support](https://img.shields.io/packagist/php-v/frknakk/laravel-internetmarke)](https://www.php.net/downloads)
+[![Packagist Version](https://img.shields.io/packagist/v/frknakk/laravel-internetmarke)](https://packagist.org/packages/frknakk/laravel-internetmarke)
+[![GitHub](https://img.shields.io/github/license/frknakk/laravel-internetmarke)](LICENSE)
 
 Require this package in the `composer.json` of your Laravel project.
 
@@ -124,4 +124,4 @@ Internetmarke is a soap web service for previewing and purchasing internet stamp
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](LICENSE).
+The MIT License (MIT). Please see [License File](LICENSE) for more information.

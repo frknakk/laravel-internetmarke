@@ -1,6 +1,6 @@
 {
     "name": "frknakk/laravel-internetmarke",
-    "description": "A Internetmarke and ProdWS Wrapper for Laravel",
+    "description": "Internetmarke and ProdWS Wrapper for Laravel",
     "type": "project",
     "license": "MIT",
     "keywords": ["laravel", "internetmarke", "prodws", "eporto", "portokasse"],
@@ -31,7 +31,7 @@
         "php": "^7.4 || ^8.0",
         "ext-soap": "*",
         "ext-xml": "*",
-        "illuminate/support": "^6|^7|^8|^9",
+        "illuminate/support": "^6|^7|^8|^9|^10",
         "robrichards/wse-php": "^2.0"
     }
 }
